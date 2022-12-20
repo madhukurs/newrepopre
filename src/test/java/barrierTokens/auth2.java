@@ -16,7 +16,7 @@ public class auth2 {
 	 .formParam("grant_type", "client_credentials")
 	 .formParam("redirect_uri", "http://example.com")
 	 .formParam("code", "authorization_code")
-	 
+	 //hg,jhg
 	 .when().post("http://coop.apps.symfonycasts.com/token");
 	String token=resp.jsonPath().get("access_token");
 	System.out.println(token);
