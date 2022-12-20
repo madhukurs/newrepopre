@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-11-16T10:32:07 IST" name="Default suite" finished-at="2022-11-16T10:32:10 IST" duration-ms="3079">
+    <groups>
+    </groups>
+    <test started-at="2022-11-16T10:32:07 IST" name="Default test" finished-at="2022-11-16T10:32:10 IST" duration-ms="3079">
+      <class name="endtoendScenario.CreatEUpdateAndValidate">
+        <test-method is-config="true" signature="databasecongfig()[pri:0, instance:endtoendScenario.CreatEUpdateAndValidate@20f5239f]" started-at="2022-11-16T10:32:06 IST" name="databasecongfig" finished-at="2022-11-16T10:32:07 IST" duration-ms="1646" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- databasecongfig -->
+        <test-method signature="AddAndDelete()[pri:0, instance:endtoendScenario.CreatEUpdateAndValidate@20f5239f]" started-at="2022-11-16T10:32:07 IST" name="AddAndDelete" finished-at="2022-11-16T10:32:10 IST" duration-ms="3013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddAndDelete -->
+        <test-method is-config="true" signature="databasecloseconfig()[pri:0, instance:endtoendScenario.CreatEUpdateAndValidate@20f5239f]" started-at="2022-11-16T10:32:10 IST" name="databasecloseconfig" finished-at="2022-11-16T10:32:10 IST" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- databasecloseconfig -->
+      </class> <!-- endtoendScenario.CreatEUpdateAndValidate -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
