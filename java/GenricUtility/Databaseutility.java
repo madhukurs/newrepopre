@@ -29,24 +29,39 @@ public class Databaseutility
      * @throws SQLException
      */
        
-   public List<String> getdatafromdatabase(String query ,String columname)throws SQLException {
+   public String getdatafromdatabase1(String query ,int columindex,String expdata)throws SQLException {
+	   
+	   boolean flag=false;
 	Statement stm =connection. createStatement();
 	ResultSet result = stm.executeQuery(query);
-	ArrayList list=new ArrayList<>();
 	while(result.next()) {
-		list.add(result.getString(columname));
+		if(result.getString(columindex).equalsIgnoreCase(expdata))
+		{
+			flag=true;
+			break;
+		}
+		
 	}
-	return list;
+	if(flag) {
+		System.out.println("verified");
+		return expdata;
+	}
+	else {
+		System.out.println("data not verified");
+		return "";
+	}
+	
+
    }
    
    
    
    
-   public void opendbconnection(String url,String username,String password) throws SQLException
+   public void opendbconnection() throws SQLException
    {
 	   Driver drii = new Driver();
 	   DriverManager.registerDriver(drii);
-	   connection=DriverManager.getConnection(url, username, password);
+	   connection=DriverManager.getConnection(IconstantPath.dburl, IconstantPath.dbusername, IconstantPath.dbpassword);
    }
    
    
@@ -67,24 +82,24 @@ public class Databaseutility
     * @throws SQLException
     */
    
-   public boolean verifingdataindatabase(String query ,String columname,String Excepteddata) throws SQLException
-   {
-	 List<String>  list =getdatafromdatabase(query,columname);
-	 boolean flag=false;
-	 for(String actualData:list)
-	 {
-		 if(actualData.equalsIgnoreCase(Excepteddata));
-		 {
-		     flag=true;
-		     break;
-		 }
-		 
-			 
-		 }
-	 return flag;
-	 }
-   
-   
+//   public boolean verifingdataindatabase(String query ,String columname,String Excepteddata) throws SQLException
+//   {
+//	 List<String>  list =getdatafromdatabase(query,columname);
+//	 boolean flag=false;
+//	 for(String actualData:list)
+//	 {
+//		 if(actualData.equalsIgnoreCase(Excepteddata));
+//		 {
+//		     flag=true;
+//		     break;
+//		 }
+//		 
+//			 
+//		 }
+//	 return flag;
+//	 }
+//   
+//   
  
 
   public void closingdb() throws SQLException

@@ -2,9 +2,15 @@ package GenricUtility;
 
 public interface IconstantPath 
 {
-	 String PROJECT_PATH=System.getProperty("user.dir");
-	 String EXCEL_PATH=PROJECT_PATH+"/src/test/resources/Exceldata.xlsx";
-	 String PROPERTY_FILE_PATH=PROJECT_PATH+"/src/test/resources/Data.properties";
+	 String dburl="jdbc:mysql://rmgtestingserver:3333/projects";
+	String dbusername="root@%";
+	String dbpassword="root";
+	
+	String appusername="rmgyantra";
+	String apppassword="rmgy@9999";
+	
+	String EXCEL_PATH="./src/test/resources/Excel.xlsx";
+	
 	 
 
 	 
